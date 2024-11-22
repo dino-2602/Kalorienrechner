@@ -71,7 +71,7 @@ Hier sind die verwendeten Technologien in diesem Projekt:
 
 ## Screenshot
 
-![Kalorienrechner](https://github.com/<DeinBenutzername>/<DeinRepository>/blob/main/screenshots/kalorienrechner.png)
+![Kalorienrechner](https://github.com/dino-2602/Kalorienrechner/blob/main/Kalorienrechner/screenshots/Kalorienbedarf%20berechnen.png)
 
 ## Lizenz
 
