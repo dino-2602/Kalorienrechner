@@ -44,23 +44,23 @@
             <h3 class="mt-4">PAL-Faktoren (Gesamtzeit darf 24 Stunden nicht überschreiten)</h3>
             <div class="col-md-4">
                 <label for="schlafen" class="form-label">Schlafen (Std)</label>
-                <input type="number" name="schlafen" id="schlafen" class="form-control" required min="1">
+                <input type="number" name="schlafen" id="schlafen" class="form-control" required min="0">
             </div>
             <div class="col-md-4">
                 <label for="sitzen" class="form-label">Sitzen (Std)</label>
-                <input type="number" name="sitzen" id="sitzen" class="form-control" required min="1">
+                <input type="number" name="sitzen" id="sitzen" class="form-control" required min="0">
             </div>
             <div class="col-md-4">
                 <label for="stehen" class="form-label">Stehen (Std)</label>
-                <input type="number" name="stehen" id="stehen" class="form-control" required min="1">
+                <input type="number" name="stehen" id="stehen" class="form-control" required min="0">
             </div>
             <div class="col-md-6">
                 <label for="sport" class="form-label">Sport (Std)</label>
-                <input type="number" name="sport" id="sport" class="form-control" required min="1">
+                <input type="number" name="sport" id="sport" class="form-control" required min="0">
             </div>
             <div class="col-md-6">
                 <label for="sonstige" class="form-label">Sonstige (Std)</label>
-                <input type="number" name="sonstige" id="sonstige" class="form-control" required min="1">
+                <input type="number" name="sonstige" id="sonstige" class="form-control" required min="0">
             </div>
 
             <div class="col-12">
@@ -85,9 +85,6 @@
             if ($alter < 1) $errors[] = "Das Alter muss größer als 0 sein.";
             if ($gewicht < 1) $errors[] = "Das Gewicht muss größer als 0 sein.";
             if ($groesse < 1) $errors[] = "Die Größe muss größer als 0 sein.";
-            if ($schlafen < 1 || $sitzen < 1 || $stehen < 1 || $sport < 1 || $sonstige < 1) {
-                $errors[] = "PAL-Faktoren müssen mindestens 1 Stunde betragen.";
-            }
 
             $gesamtstunden = $schlafen + $sitzen + $stehen + $sport + $sonstige;
             if ($gesamtstunden > 24) {
@@ -122,30 +119,31 @@
         }
         ?>
     </div>
+
     <script>
-    const modeToggle = document.getElementById("modeToggle");
-    const modeLabel = document.getElementById("modeLabel");
-    const body = document.body;
+        const modeToggle = document.getElementById("modeToggle");
+        const modeLabel = document.getElementById("modeLabel");
+        const body = document.body;
 
-    // Zustand des Dark Modes aus localStorage wiederherstellen
-    if (localStorage.getItem("darkMode") === "true") {
-        body.classList.add("dark-mode");
-        modeToggle.checked = true;
-        modeLabel.textContent = "Light Mode";
-    }
-
-    // Wechsel des Dark Modes und Speicherung in localStorage
-    modeToggle.addEventListener("change", () => {
-        if (modeToggle.checked) {
+        // Zustand des Dark Modes aus localStorage wiederherstellen
+        if (localStorage.getItem("darkMode") === "true") {
             body.classList.add("dark-mode");
-            localStorage.setItem("darkMode", "true");
+            modeToggle.checked = true;
             modeLabel.textContent = "Light Mode";
-        } else {
-            body.classList.remove("dark-mode");
-            localStorage.setItem("darkMode", "false");
-            modeLabel.textContent = "Dark Mode";
         }
-    });
-</script>
+
+        // Wechsel des Dark Modes und Speicherung in localStorage
+        modeToggle.addEventListener("change", () => {
+            if (modeToggle.checked) {
+                body.classList.add("dark-mode");
+                localStorage.setItem("darkMode", "true");
+                modeLabel.textContent = "Light Mode";
+            } else {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("darkMode", "false");
+                modeLabel.textContent = "Dark Mode";
+            }
+        });
+    </script>
 </body>
 </html>
