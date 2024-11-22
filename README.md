@@ -62,10 +62,12 @@ Dieses Projekt enthält eine PHP-Anwendung zur Berechnung des täglichen Kalorie
 
 ## Technologien
 
-- **PHP**: Backend-Logik und Validierung.
-- **JavaScript**: Dark Mode mit localStorage.
-- **Bootstrap**: Responsives Design.
-- **CSS**: Anpassung des Designs.
+Hier sind die verwendeten Technologien in diesem Projekt:
+
+- [![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?&style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+- [![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [![Bootstrap](https://img.shields.io/badge/Bootstrap-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+- [![CSS](https://img.shields.io/badge/CSS3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Screenshot
 
